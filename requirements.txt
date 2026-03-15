@@ -5,4 +5,4 @@ webdriver-manager
 python-dotenv
 apscheduler
 jinja2
-weasyprint
+lxml
