@@ -34,7 +34,7 @@ def fetch_all_posts() -> tuple:
 
     # 微博
     print("正在获取微博动态...")
-    weibo = WeiboScraper(ZHUOYUAN_WEBO_UID, HEADLESS == "true", TIMEOUT)
+    weibo = WeiboScraper(ZHUOYUAN_WEBO_UID, HEADLESS, TIMEOUT)
     try:
         weibo_posts = weibo.get_posts()
     except Exception as e:
@@ -44,7 +44,7 @@ def fetch_all_posts() -> tuple:
 
     # 小红书
     print("正在获取小红书动态...")
-    xhs = XiaohongshuScraper(ZHUOYUAN_XHS_UID, HEADLESS == "true", TIMEOUT)
+    xhs = XiaohongshuScraper(ZHUOYUAN_XHS_UID, HEADLESS, TIMEOUT)
     try:
         xhs_posts = xhs.get_posts()
     except Exception as e:
@@ -54,7 +54,7 @@ def fetch_all_posts() -> tuple:
 
     # 抖音
     print("正在获取抖音动态...")
-    douyin = DouyinScraper(ZHUOYUAN_DOUYIN_UID, HEADLESS == "true", TIMEOUT)
+    douyin = DouyinScraper(ZHUOYUAN_DOUYIN_UID, HEADLESS, TIMEOUT)
     try:
         douyin_posts = douyin.get_posts()
     except Exception as e:
